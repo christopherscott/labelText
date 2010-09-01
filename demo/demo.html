@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>defTextFancy jQuery Plug-In</title>
+  <style type="text/css">
+  		input {display: block; margin-bottom: 1em;}
+		.wrapper {width: 500px; margin: 0 auto;}
+		fieldset { margin: 50px auto;}
+		textarea { padding: 3px;}
+		form {position: relative;}
+  	</style>
+	
+</head>
+<body>
+
+<div class="wrapper">
+<form action="http://brettisbowl.com" method="post">
+	<fieldset>
+			<label for="user">Login:</label>
+			<input type="password" class="basic" alt="username" name="user" id="user" />
+			<label for="pass">Password:</label>
+			<input type="text" class="basic" title="password" name="pass" id="pass">
+			<label for="location">Location:</label>
+			<input type="text" class="basic" title="Somewhere, TX" name="location" id="location" />
+			<label for="selector">selector</label>
+			<select id="selector" name="selector">
+				<option>pick me</option>
+				<option>no pick me</option>
+			</select>
+	</fieldset>
+	<fieldset>
+			<label for="arg1">Custom argument 1:</label><input type="text" name="arg1" id="arg1" />
+			<label for="arg2">Custom argument 2:</label><input type="text" name="arg2" id="arg2" />
+			<label for="arg3">Custom argument 3:</label><input type="text" name="arg3" id="arg3"/>
+			<label for="remember">Remember info?</label><input type="checkbox" name="remember" id="remember" />
+	</fieldset>
+	<fieldset><label for="comments">Comments</label>
+		<textarea for="comments" id="comments" cols="30" rows="10" alt="Please enter your comments, suggestions, and questions here..."></textarea>
+	</fieldset>
+</form>
+
+
+<script type="text/javascript" src="../lib/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="../jquery.labText.js"></script>
+<script type="text/javascript">
+	jQuery(function($) {
+		$("label").labText({"fieldClass" : "fieldfield", "labelClass" : "lablab"});
+	});
+</script>
+
+</body>
+</html>
